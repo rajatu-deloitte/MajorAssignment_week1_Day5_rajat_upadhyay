@@ -1,0 +1,35 @@
+#%RAML 1.0
+title: Milestone2 Part 2 Raml - Rajat Upadhyay
+baseUri: milestone2-rajatupadhyay-pthh.us-e2.cloudhub.io
+mediaType:
+  - application/json
+protocols:
+  - HTTP
+/milestone2:
+  post:
+    body:
+      example:
+        strict: true
+        value:
+          post_id: 2003
+      properties:
+        post_id:
+          example: 1
+          type: number
+          format: int
+    responses:
+      "200":
+        body:
+          items:
+            properties:
+              post_id:
+                example: 1
+                type: number
+                format: int
+              id:
+                example: 1
+                type: number
+                format: int
+              name:
+                example: Example
+                type: string

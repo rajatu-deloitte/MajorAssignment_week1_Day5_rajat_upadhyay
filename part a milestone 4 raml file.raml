@@ -1,0 +1,31 @@
+#%RAML 1.0
+types:
+  RESPONSEDATATYPE:
+    example:
+      strict: true
+      value:
+        Gender: female
+        Name: Gorakhanatha Chaturvedi
+        Status: active
+    properties:
+      Gender:
+        example: Example
+        type: string
+      Name:
+        example: Example
+        type: string
+      Status:
+        example: Example
+        type: string
+title: MILESTONE 4 PART A RAJAT UPADHYAY
+baseUri: http://milestone3-rajatupadhyay-vsvx.us-e2.cloudhub.io
+mediaType:
+  - application/json
+protocols:
+  - HTTP
+/milestone3:
+  get:
+    responses:
+      "200":
+        body:
+          type: RESPONSEDATATYPE
